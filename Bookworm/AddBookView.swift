@@ -41,7 +41,7 @@ struct AddBookView: View {
                         if title.isEmpty || author.isEmpty {
                             missingInfoAlert = true
                         } else {
-                            let newBook = Book(title: title, author: author, genre: genre, review: review, rating: rating)
+                            let newBook = Book(title: title, author: author, genre: genre, review: review, rating: rating, date: Date.now)
                             modelContext.insert(newBook)
                             dismiss()
                         }
